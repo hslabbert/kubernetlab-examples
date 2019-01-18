@@ -1,0 +1,274 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: switch1
+  labels:
+    app: nxosv
+    role: switch1
+spec:
+  selector:
+    app: nxosv
+    role: switch1
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: ssh
+      port: 22
+    - protocol: UDP
+      name: snmp
+      port: 161
+    - protocol: TCP
+      name: https
+      port: 443
+    - protocol: TCP
+      name: netconf
+      port: 830
+    - protocol: TCP
+      name: qemu
+      port: 5000
+    - protocol: TCP
+      name: port01
+      port: 10001
+    - protocol: TCP
+      name: port02
+      port: 10002
+    - protocol: TCP
+      name: port03
+      port: 10003
+    - protocol: TCP
+      name: port04
+      port: 10004
+    - protocol: TCP
+      name: port05
+      port: 10005
+    - protocol: TCP
+      name: port06
+      port: 10006
+    - protocol: TCP
+      name: port07
+      port: 10007
+    - protocol: TCP
+      name: port08
+      port: 10008
+    - protocol: TCP
+      name: port09
+      port: 10009
+    - protocol: TCP
+      name: port10
+      port: 10010
+    - protocol: TCP
+      name: port11
+      port: 10011
+    - protocol: TCP
+      name: port12
+      port: 10012
+    - protocol: TCP
+      name: port13
+      port: 10013
+    - protocol: TCP
+      name: port14
+      port: 10014
+    - protocol: TCP
+      name: port15
+      port: 10015
+    - protocol: TCP
+      name: port16
+      port: 10016
+    - protocol: TCP
+      name: port17
+      port: 10017
+    - protocol: TCP
+      name: port18
+      port: 10018
+    - protocol: TCP
+      name: port19
+      port: 10019
+    - protocol: TCP
+      name: port20
+      port: 10020
+    - protocol: TCP
+      name: port21
+      port: 10021
+    - protocol: TCP
+      name: port22
+      port: 10022
+    - protocol: TCP
+      name: port23
+      port: 10023
+    - protocol: TCP
+      name: port24
+      port: 10024
+    - protocol: TCP
+      name: port25
+      port: 10025
+    - protocol: TCP
+      name: port26
+      port: 10026
+    - protocol: TCP
+      name: port27
+      port: 10027
+    - protocol: TCP
+      name: port28
+      port: 10028
+    - protocol: TCP
+      name: port29
+      port: 10029
+    - protocol: TCP
+      name: port30
+      port: 10030
+    - protocol: TCP
+      name: port31
+      port: 10031
+    - protocol: TCP
+      name: port32
+      port: 10032
+    - protocol: TCP
+      name: port33
+      port: 10033
+    - protocol: TCP
+      name: port34
+      port: 10034
+    - protocol: TCP
+      name: port35
+      port: 10035
+    - protocol: TCP
+      name: port36
+      port: 10036
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: switch2
+  labels:
+    app: nxosv
+    role: switch2
+spec:
+  selector:
+    app: nxosv
+    role: switch2
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      name: ssh
+      port: 22
+    - protocol: UDP
+      name: snmp
+      port: 161
+    - protocol: TCP
+      name: https
+      port: 443
+    - protocol: TCP
+      name: netconf
+      port: 830
+    - protocol: TCP
+      name: qemu
+      port: 5000
+    - protocol: TCP
+      name: port01
+      port: 10001
+    - protocol: TCP
+      name: port02
+      port: 10002
+    - protocol: TCP
+      name: port03
+      port: 10003
+    - protocol: TCP
+      name: port04
+      port: 10004
+    - protocol: TCP
+      name: port05
+      port: 10005
+    - protocol: TCP
+      name: port06
+      port: 10006
+    - protocol: TCP
+      name: port07
+      port: 10007
+    - protocol: TCP
+      name: port08
+      port: 10008
+    - protocol: TCP
+      name: port09
+      port: 10009
+    - protocol: TCP
+      name: port10
+      port: 10010
+    - protocol: TCP
+      name: port11
+      port: 10011
+    - protocol: TCP
+      name: port12
+      port: 10012
+    - protocol: TCP
+      name: port13
+      port: 10013
+    - protocol: TCP
+      name: port14
+      port: 10014
+    - protocol: TCP
+      name: port15
+      port: 10015
+    - protocol: TCP
+      name: port16
+      port: 10016
+    - protocol: TCP
+      name: port17
+      port: 10017
+    - protocol: TCP
+      name: port18
+      port: 10018
+    - protocol: TCP
+      name: port19
+      port: 10019
+    - protocol: TCP
+      name: port20
+      port: 10020
+    - protocol: TCP
+      name: port21
+      port: 10021
+    - protocol: TCP
+      name: port22
+      port: 10022
+    - protocol: TCP
+      name: port23
+      port: 10023
+    - protocol: TCP
+      name: port24
+      port: 10024
+    - protocol: TCP
+      name: port25
+      port: 10025
+    - protocol: TCP
+      name: port26
+      port: 10026
+    - protocol: TCP
+      name: port27
+      port: 10027
+    - protocol: TCP
+      name: port28
+      port: 10028
+    - protocol: TCP
+      name: port29
+      port: 10029
+    - protocol: TCP
+      name: port30
+      port: 10030
+    - protocol: TCP
+      name: port31
+      port: 10031
+    - protocol: TCP
+      name: port32
+      port: 10032
+    - protocol: TCP
+      name: port33
+      port: 10033
+    - protocol: TCP
+      name: port34
+      port: 10034
+    - protocol: TCP
+      name: port35
+      port: 10035
+    - protocol: TCP
+      name: port36
+      port: 10036

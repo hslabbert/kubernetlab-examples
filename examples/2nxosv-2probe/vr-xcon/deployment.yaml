@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: vr-xcon-p2p
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vr-xcon
+        role: vr-xcon-p2p
+    spec:
+      containers:
+        - name: vr-xcon
+          image: vrnetlab/vr-xcon
+          args:
+            - "--p2p"
+            - "switch2/32--switch1/1"
+            - "switch2/31--switch1/2"
+            - "switch2/30--switch1/3"
+            - "switch2/29--switch1/4"
+            - "switch2/1--vr-xcon-probe1/1"
+            - "switch1/32--vr-xcon-probe2/1"
+          securityContext:
+            privileged: true

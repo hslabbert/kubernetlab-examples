@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: vr-xcon-probe1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vr-xcon
+        role: vr-xcon-probe1
+    spec:
+      containers:
+        - name: vr-xcon-probe1
+          image: <DOCKER-REGISTRY>/vr-xcon-probe:1.2
+          args: ["--tap-listen", "1"]
+          securityContext:
+            privileged: true
+
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: vr-xcon-probe2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vr-xcon
+        role: vr-xcon-probe2
+    spec:
+      containers:
+        - name: vr-xcon-probe2
+          image: <DOCKER-REGISTRY>/vr-xcon-probe:1.2
+          args: ["--tap-listen", "1"]
+          securityContext:
+            privileged: true

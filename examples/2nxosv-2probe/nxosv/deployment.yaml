@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: switch1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nxosv
+        role: switch1
+    spec:
+      containers:
+        - name: switch1
+          image: <DOCKER-REGISTRY>/vr-nxos:7.0.3.I6.1
+          securityContext:
+            privileged: true
+          resources:
+            requests:
+              memory: "8500Mi"
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: switch2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nxosv
+        role: switch2
+    spec:
+      containers:
+        - name: switch2
+          image: <DOCKER-REGISTRY>/vr-nxos:7.0.3.I6.1
+          securityContext:
+            privileged: true
+          resources:
+            requests:
+              memory: "8500Mi"
